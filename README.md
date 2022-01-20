@@ -1,26 +1,38 @@
 # My Knowledge & Experience
 
-Olá! Seja Bem-vindo ao meu My Knowledge & Experience! :v:
+Hi! Welcome to mine My Knowledge & Experience! :v:
 
-Aqui você encontrará vários de meus aprendizados ao longo dos anos e poderá entender o progresso em que estou.
+Here you will find several of my learnings over the years and you will be able to understand the progress I am making.
 
-🌱 **VISÃO GERAL DE CONHECIMENTOS**
+🌱 **OVERVIEW OF KNOWLEDGE**
 
-Eu classifico meus níveis de conhecimento de **Básico a Especialista**. Desta forma você poderá ter uma ideia da familiaridade que possuo em uma determinada área, e ainda, se desejar, poderá acessar a pasta para verificar projetos, estudos e afins que realizei para o item.
+I classify them from basic to specialist, so that you can get an idea of the level of knowledge and technique I have in the area.
 
-*1 – Básico: Representa apenas o conhecimento do item.*
+_1 – Basic: Represents the basic knowledge of the item._
 
-*2 – Médio: Representa um conhecimento mediano do item.*
+_2 – Average: Represents the average knowledge of the item._
 
-*3 – Avançado: Representa um conhecimento avançado do item.*
+_3 – Advanced: Represents the advanced knowledge of the item._
 
-*4 – Especialista: Representa um conhecimento muito alto do item.*
+_4 – Expert: Represents the domain of the item._
 
-💻 **RELATÓRIO DE CONHECIMENTOS EM TI**
+:computer: **REPORT OF GENERAL IT KNOWLEDGE**
 
-* 1 - Algoritmos de Programação (CALANGO): Especialista.
-* 2 - Linguagem de HTML: Avançado.
-* 3 - Linguagem Java: Médio.
-* 4 - Linguagem CSS: Médio.
-* 5 - Linguagem de Programação C/CSS: Básico.
-* 6 - AndroidStudio (with JavaScript): Básico.
+* HTML : Advanced.
+* MARKDOWN: Advanced;
+* JAVA: Average;
+* Programming Logic: Average;
+* CSS: Medium;
+* GIT/GITHUB: Medium;
+* MY SQL: Basic;
+* LUA: Basic;
+
+**LANGUAGES**
+
+* ENGLISH (COMMUNICATION): Basic;
+* ENGLISH (READING AND WRITING): Medium;
+* SPANISH: Basic.
+
+**DEVELOPMENT METHODOLOGIES**
+
+* SCRUM: Medium.
