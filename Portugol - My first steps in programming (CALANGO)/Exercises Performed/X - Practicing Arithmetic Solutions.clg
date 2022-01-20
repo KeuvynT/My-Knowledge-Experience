@@ -1,0 +1,120 @@
+algoritmo keuvynTeixeiradeJesus;
+
+// Synthesis [EU-US]
+// Purpose: Practice Arithmetic Operations..
+// Entry: Diverse Value.
+// Output: Result of Values.
+
+// Síntese
+//  Objetivo: Aperfeiçoar as Operações Aritméticas.
+//  Entrada : Valores Diversos.
+//  Saída   : Resultoado dos Valores.
+
+principal
+
+	// Declarations/Declarações
+		inteiro somaNumero1, somaNumero2, soma; // Sum Operation/Operação da Soma
+		real subtNumero1, subtNumero2, subt; // Subtraction Operation/Operação de Subtração
+		real mediaNumero1, mediaNumero2, media, media2; // Averaging Operation/Operação de Média
+		real divisNumero1, divisNumero2, divisao; // Division Operation and Formatation/Operação de Divisão e Formatação
+		inteiro quocNumero1, quociente; // Division Quotient Operation/Operação de Quociente de Divisão
+		caracter resposta; // Remainder Quotient Operation/Operação do Resto do Quociente
+	// Instructions/Instruções
+		escreval("--SISTEMA DE OPERAÇÕES ARITMÉTICAS--");
+		escreval("Olá! Vamos fazer algumas operações para compreender melhor nosso estudo!!");
+	// SUM OPERATION/OPERAÇÃO DE SOMA
+		escreval("");
+		escreval("--SOMA (Numero1+Numero2)");
+		escreva("Digite um numero inteiro qualquer: ");
+			leia(somaNumero1);
+		escreva("Digite outro inteiro qualquer: ");
+			leia(somaNumero2);
+			soma = somaNumero1 + somaNumero2;
+		escreval("> O resultado desta soma é: ", soma);
+	// SUBTRACTION OPERATION/OPERAÇÃO DE SUBTRAÇÃO
+		escreval("");
+		escreval("--SUBTRAÇÃO (Numero1-Numero2)");
+		escreval("Lembre-se de duas coisas: ");
+		escreval("1) Não se deve utilizar virgulas e sim pontos representando as virgulas.");
+		escreval("2) Valores alfanuméricos não são operacionais, ou seja não podem ser manuseados aritméticamente.");
+		escreval("");
+		escreva("Digite um numero qualquer (pode ser real): ");
+			leia(subtNumero1);
+		escreva("Digite outro valor numérico qualquer  (pode ser real): ");
+			leia (subtNumero2);
+			subt = subtNumero1 - subtNumero2;
+		escreval("> O resultado da subtração é: ", subt);
+	// OPERATION OF CALCULATION OF AVERAGE/OPERAÇÃO DE CALCULO DE MÉDIA
+		escreval("");
+		escreval("--MÉDIA (A média é [Numeroqualquer/2]. Neste caso faremos [Numero1+Numero2/2].)");
+		escreva("Digite um numero qualquer (pode ser real): ");
+			leia(mediaNumero1);
+		escreva("Digite outro numero qualquer (pode ser real): ");
+			leia (mediaNumero2);
+			media = mediaNumero1 + mediaNumero2 / 2;
+			media2 = (mediaNumero1 + mediaNumero2) / 2;
+		escreval("A média desta expressão é: ", media);
+		escreval("");
+		escreval("(Observação: Se você pensou que seria ", media2, ", preste atenção nas prioridades aritméticas, são elas: Divisão, Multiplicação, Soma e Subtração. Se adicionarmos os parenteses na expressão, ai sim sua média fica com este resultado ", media2,".)"); //Observação sobre uso dos "(Parenteses)"
+	// DIVISION OPERATION/OPERAÇÃO DE DIVISÃO
+		escreval("");
+		escreval("--DIVISÃO (Valor1/Valor2). Inf: Diferente do quociente, a divisão permite numeros decimais.");
+		escreva("Digite um número qualquer (pode ser real): ");
+			leia(divisNumero1);
+		escreva("Digite outro número qualquer (pode ser real): ");
+			leia (divisNumero2);
+			divisao = divisNumero1 / divisNumero2;
+		escreval("O resultado da divisão é: ", divisao);
+	// DIVISON OPERATION WITH FORMATATION/OPERAÇÃO DE DIVISÃO COM FORMATAÇÃO
+		escreval("")
+		escreval("--DIVISAO COM LIMITE DECIMAL OU SEJA, FORMATAÇÃO (Valor1/10)");
+			enquanto (divisNumero1 != 3 e divisNumero1 != 6 e divisNumero1 != 7 e divisNumero1 != 9) faca //Repete se não escolher as opções corretas
+				escreva("Escolha um dos números a seguir (3, 6, 7 ou 9) e vamos dividi-lo por 10: ");
+				leia(divisNumero1);
+			fimEnquanto
+			divisao = 10 / divisNumero1;
+		escreval("Resultado sem formatação (Numero) é: ", divisao); // Resultado sem formatação
+		escreval("Resultado com formatação (Numero:3:3) é: ", divisao:3:3); // Resultado com formatação
+		escreval("Esta formatação (Numero:3:3) significa:"); // Informação sobre a formatação
+		escreval("1 > Apresentar 3 casas para os valores numéricos. (Primeiro três).");
+		escreval("2 > Apresentar 3 casas para valores fracionários. (Segundo três)");
+	// DIVISION QUOCIENT OPERATION/OPERAÇÃO DE DIVISÃO QUOCIENTE
+		escreval("");
+		escreval("--QUOCIENTE (Valor1/Valor2)");
+		escreval("Info: Diferente da divisão comum, o quociente permite apenas divisao que resulta numeros inteiros.");
+		escreval("Q) Você tem 5 laranjas e 2 crianças e precisa dividir as laranjas entre as crianças, mas não pode cortar nenhuma laranja. Quantas laranjas ficarão para cada criança?");
+			leia(quocNumero1);
+			quociente = 5 \ 2;
+				se (quocNumero1 == quociente) entao
+					escreval("Você acertou! O quociente é ", quociente, " que significa justamente isto, dividir em partes inteiras, no caso 2 para cada criança e 1 sobra como resto.");
+			senao
+			escreval("Você errou. A quantidade correta é ", quociente, " que significa justamente isto, dividir em partes inteiras, no caso 2 para cada criança e 1 sobra como resto.");
+		fimSe
+	// REMAINDER QUOTIENT OPERATION/OPERAÇÃO DO RESTO DO QUOCIENTE
+		escreval(""); // Quebra de Linha
+		escreval("--RESTO DA DIVISÃO (O que sobrou do quociente)");
+		escreval("Vamos descobrir se um número é Impar ou Par, sabendo que:");
+		escreval("1 > Para se descobrir se um número é impar ou par (Deve dividi-lo por quociente de 2");
+		escreval("2 > Se tiver dado 0, é par, caso contrário, é impar.)");
+		escreval("3 > Seu operador é (uma barra para esquerda), e o resto, é justamento o (resto do quociente), que pode ser obtido também pelas operações mod ou %.");
+		escreval("4 > O Quociente é a divisão que permite a existência de restos(pois não aceita numeros com virgula mas apenas números inteiros");
+		escreval("5 > Pergunta: Quer saber por que 0 ou 1 definem par ou impar? Digite S para sim e N para não: ");
+			leiaCaracter(resposta);
+				enquanto (resposta != 'n' e resposta != 'N' e resposta != 's' e resposta != 'S') faca
+					escreva("Você não respondeu corretamente. Digite S para sim ou N para não!");
+					leiaCaracter(resposta);
+				fimEnquanto
+			se (resposta == 's' ou resposta == 'S') entao
+				escreval("Qualquer numero que você colocar suponhamos o número 29.");
+				escreval("> Se dividi-lo por 2 voce terá 14,50. Ou seja terá números fracionários e o quociente não aceita valores com virgula, neste caso fica entao os seguintes resultados: ");
+				escreval("Quociente da Divisão (29/2): 14.");
+				escreval("Resto da Divisão (29/2): 1.");
+				escreval("Desta forma, por sobrar o número (1), este número 29 é impar. Isto vale para encontrar um número impar de qualquer grandeza.");
+			senao
+				se (resposta == 'n' ou resposta == 'N') entao
+						escreva("Que bom que você entendeu, até a próxima!");
+				senao
+			fimSe
+		fimSe
+		
+fimPrincipal

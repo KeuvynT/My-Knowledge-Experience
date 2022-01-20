@@ -1,0 +1,48 @@
+algoritmo keuvynTeixeiradeJesus;
+
+// Synthesis [EU-US]
+// Purpose: Practice Controlled Repetition Algorithms.
+// Entry: Necessary informations.
+// Output: Result of the question.
+
+// Síntese [PT-BR]
+//  Objetivo: Practice Algoritmos de Repetição CONTROLADA.
+//  Entrada : Informações necessárias.
+//  Saída   : Resultado da pergunta.
+
+principal
+
+	// Declarations/Declarações
+		inteiro startOperation, repeticoes; // Exercise 1 - Repetition of a number (x Times) with controlled repetition/Exercício 1 - Repeteição de um número (xVezes) com repetição controlada
+		inteiro nTabuada, ordem; // Exercise 2 - Print multiplication tables/Exercício 2 - Imprimir tabuada de multiplacação
+		inteiro estudante; // Exercise 3 - Average grade of a class of 50 students/Exercício 3 - Média de notas de uma turma de 50 estudantes
+		real nota, notaTotal, media; // Exercise 3 - Average grade of a class of 50 students/Exercício 3 - Média de notas de uma turma de 50 estudantes
+	// Instructions/Instruções
+		escreval("--DESENVOLVIMENTO DE REPETIÇÕES--");
+	// 1 - REPEAT OF A NUMBER (x TIMES) WITH CONTROLLED REPEAT/1 - REPETIÇÃO DE UM NÚMERO (xVEZES) COM REPETIÇÃO CONTROLADA
+		escreval("1) Algoritmo repete um número cinco vezes. Neste caso (número 5).");
+			para(repeticoes de 1 ate 5 passo 1) faca
+				escreval("> 5");
+			fimPara
+	// 2 - PRINT MULTIPLICATION TABLE/2 - IMPRIMIR TABUADA DE MULTIPLICAÇÃO
+		escreval("");
+		escreval("2) Agora o algoritmo imprime uma Tabuadada de Multiplicação.");
+		escreva("> Você deseja que o algoritmo imprima a tabuada de qual número?");
+			leia(nTabuada);
+				para(ordem de 1 ate 10 passo 1) faca
+					escreval(nTabuada:2, "x", ordem:2, "= ", (nTabuada * ordem ));
+			fimPara
+	// 3 - AVERAGE GRADES OF A CLASS OF 50 STUDENTS/3 - MÉDIA DE NOTAS DE UMA TURMA DE 50 ESTUDANTES
+		escreval("");
+		escreval("3) Agora o algoritmo tira a média da nota de 50 estudantes.");
+			notaTotal = 0; // Variável para acumular a nota dos alunos
+				para(estudante de 1 ate 50 passo 1) faca
+					escreva("> Digite a nota do ", estudante, "º estudante: ");
+						leia(nota); // Nota de entrada
+						notaTotal = notaTotal + nota;
+				fimPara
+		media = notaTotal / 50;
+	// Conclusion/Conclusão
+		escreva("A média de notas da sua turma é ", media:3:3, "."); // Print of the total average of the grades/Impressão da média total das notas
+
+fimPrincipal

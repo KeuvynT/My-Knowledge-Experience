@@ -1,0 +1,40 @@
+algoritmo keuvynTeixeiradeJesus;
+
+// Synthesis [EU-US]
+// Purpose: Read two Values A and B and later exchange them so that A has the value of B and vice versa.
+// Entry: Value A, Value B.
+// Output: Value A and B exchanged.
+
+// Síntese
+//  Objetivo: Ler dois Valores A e B e posteriormente trocá-los para que A tenha o valor de B e vice-versa.
+//  Entrada : Valor A, Valor B.
+//  Saída   : Valores A e B trocados.
+
+principal
+
+	// Declarations/Declarações
+		inteiro valor1, valor2, equacao, equacao2;
+	// Instructions/Instruções
+		escreval("--- EXERCÍCIO DE TROCA DE VALORES (A POR B)----");
+	// Reading the Variables/Lendo Variáveis
+		escreva("Digite um valor qualquer para a variável A: ");
+			leia(valor1);
+		escreva("Digite outro valor qualquer para a variável B: ");
+			leia(valor2);
+		escreval("");
+		escreval("Você escolheu o seguinte:");
+		escreval("> Variável A: ", valor1);
+		escreval("> Variável B: ", valor2);
+	// Exchanging Values/Trocando Valores
+		escreval("");
+		escreval("Agora irei trocar os valores aritméticamente.");
+			equacao = (valor2*valor1) / valor1;
+				equacao2 = (valor1*valor2) / valor2;
+		escreval("Seus valores foram trocados. Veja a seguir:");
+		escreval("> Variável A: ",equacao);
+		escreval("> Variável B: ",equacao2);
+	// Conclusion/Conclusão
+		escreval("");
+		escreval("Meus parabéns!!");
+		
+fimPrincipal

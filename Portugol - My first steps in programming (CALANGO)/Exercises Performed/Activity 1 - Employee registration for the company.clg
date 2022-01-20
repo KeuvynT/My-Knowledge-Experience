@@ -1,0 +1,42 @@
+algoritmo keuvynTeixeiradeJesus;
+
+// Synthesis [EU-US]
+// Purpose: Register a new employee for a company.
+// Entry: Full Name, Age, Date of Birth, CPF and E-mail.
+// Output: Registered data.
+
+// Síntese [PT-BR]
+//  Objetivo: Cadastrar um novo membro para uma Empresa.
+//  Entrada : Nome Completo, Idade, Data de Nascimento, CPF e E-mail.
+//  Saída   : Dados do cadastrado.
+
+principal
+
+	// Declarations/Declarações
+		texto nomeCompleto, datadeNascimento, CPF, email;
+		inteiro idade;
+	// Instructions/Instruções
+	// Title/Título
+		escreval("--CADASTRO DE PESSOA FÍSICA DA EMPRESA AIRLINES--");
+	// Quiz/Questionário
+		escreval("Olá! Sou seu assistente, irei te ajudar a cadastrar um novo membro para sua empresa, me informe os seguintes dados.");
+			escreva("Me informe nome completo: ");
+				leia(nomeCompleto);
+			escreva("Me informe a data de nascimento: ");
+				leia(datadeNascimento);
+			escreva("Me informe a idade: ");
+				leia(idade);
+			escreva("Me informe o nº de CPF: ");
+				leia(CPF);
+		escreva("Me informe E-mail para contato: ");
+		leia(email);
+	// Conclusion/Conclusão
+		escreval("Tudo certo! Você foi cadastrado com Sucesso. Estes são os seus dados:");
+			escreval("Seu nome é ", nomeCompleto, ".");
+		escreval("Nascido em ", datadeNascimento, ".");
+			escreval("Com idade de ", idade, " anos.");
+		escreval("Possui o nº de CPF ", CPF, ".");
+			escreval("E-mail para contato ", email, ".");
+		escreva("Seja Bem-Vindo!!");
+
+fimPrincipal

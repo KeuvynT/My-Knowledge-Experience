@@ -1,0 +1,44 @@
+algoritmo keuvynTeixeiradeJesus;
+
+// Synthesis [EU-US]
+// Purpose: Read the code and price of each product and calculate a new price. The algorithm should also average the prices with the increase.
+/*
+Requirements:
+- Show the code, new price of each product after typing and at the end, the averages.
+- Data entry must terminate when a negative product code is read.
+/*
+// Entry: Product Code, Old Product Price, Increase.
+// Output: Product Code, new product price and at the end the average price.
+
+// Síntese [PT-BR]
+//Objetivo: Ler o código  e o preço de cada produto e calcular novo preço. O algoritimo também deverá calcular a média dos preços com o aumento.
+/*
+Requisitos:
+- Mostrar o código, novo preço de cada produto após a digitação e no final, as médias.
+- A entrada de dados deve terminar quando lida um codigo de produto negativado.
+/*
+//  Entrada : Código de Produto, Preço do Produto Antigo, Aumento.
+//  Saída   : código do Produto, novo preço do produto e ao final a média dos preços.
+
+principal
+
+	// Declarations/Declarações
+		inteiro nProduto, media;
+		real precProduto, novoPrecProduto;
+	// Instructions/Instruções
+		escreval("---ACRESCIMO DE 20% EM N PRODUTOS---");
+		escreval("Informe o código numérico do produto e em seguida seu preço. Para sair (Digite um numero de produto negativo).");
+		faca
+			escreval("");
+			escreval("Obs: para sair digite um número negativo.");
+			escreva("> Digite o número do produto:#");
+				leia(nProduto);
+			escreva("> Digite o preço do produto:R$ ");
+				leia(precProduto);
+				novoPrecProduto = precProduto*0.20+precProduto; // Calculo do Novo Preço, acréscimo de 20%
+				media = novoPrecProduto/2;
+			escreval("Item #", nProduto,": Agora passa a valer R$", novoPrecProduto:3:3," com a média ", media,".");
+					enquanto (nProduto >=0);
+		escreval("Programa finalizado.");
+		
+fimPrincipal

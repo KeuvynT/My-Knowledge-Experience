@@ -1,0 +1,68 @@
+algoritmo keuvynTeixeiradeJesus;
+
+// Synthesis [EU-US]
+// Purpose: Practice Solutions with Compound Variables.
+// Entry: Input Values.
+// Output: Output Values.
+
+// Síntese [PT-BR]
+//  Objetivo: Praticar Soluções com Variáveis Compostas.
+//  Entrada : Valores de Entrada.
+//  Saída   : Valores de Saída.
+
+principal
+
+	// Declarations/Declarações
+		inteiro estudanteEx1; // Exercise 1 - Sum of the grade of 5 students/Exercício 1 - Soma da nota de 5 Alunos.
+		real notaEx1[5], somaEx1;
+		inteiro estudanteEx2; // Exercise 2 - Enter 50 students' grades, print the grades individually and present the class average/Exercício 2 - Lançar nota de 50 alunos, imprimir as notas individualmente e apresentar a media da turma.
+		real notaEx2[50], somaEx2, mediaEx2;
+		texto senha, resposta; // Exercise 3 - Password Verification/Exercício 3 - Verificação de Senha
+	// Instructions/Instruções
+		escreval("---DESENVOLVENDO VARIÁVEIS COMPOSTAS---");
+	// 1 - ADD 5 STUDENT GRADES WITH VECTOR/SOMAR NOTA DE 5 ALUNOS COM VETOR
+		escreval("1) Some a nota de 5 Estudantes utilizando vetor.");
+			somaEx1 = 0;
+			para (estudanteEx1 de 0 ate 4 passo 1) faca
+				escreva("> Digite a nota do ", estudanteEx1+1,"º estudante: ");
+				leia(notaEx1[estudanteEx1]);
+				somaEx1 = somaEx1 + notaEx1[estudanteEx1];
+			fimPara
+		escreval("> A soma das notas é ", somaEx1);
+	// 2 - RELEASE NOTE OF 50 STUDENTS, PRINT THE GRADES INDIVIDUALLY AND PRESENT THE CLASS MEDIA/LANÇAR NOTA DE 50 ALUNOS, IMPRIMIR AS NOTAS INDIVIDUALMENTE E APRESENTAR A MEDIA DA TURMA
+		escreval("");
+		escreval("2) Algoritmo que calcule a média das notas de 50 estudantes. Ao final apresente a nota individualmente de cada aluno e também a média da turma.");
+			somaEx2 = 0;
+			para (estudanteEx2 de 0 ate 49 passo 1)faca
+				escreva("> Digite a nota do ", estudanteEx2+1,"º estudante: ");
+				leia(notaEx2[estudanteEx2]);
+				somaEx2 = somaEx2 + notaEx2[estudanteEx2];
+			fimPara
+	// Exercise 2 Printing/Impressão do Exércicio 2
+		mediaEx2 = somaEx2/50;
+			para (estudanteEx2 de 0 ate 49 passo 1) faca
+				escreval(estudanteEx2+1," = ", notaEx2[estudanteEx2],".");
+			fimPara
+		escreva("A nota média da turma é ", mediaEx2:2:2);
+	// 3 - CREATING AN ACCESS PASSWORD WITH THE FUNCTION (CompareText)/CRIANDO UMA SENHA DE ACESSO COM A FUNÇÃO (ComparaTexto)
+		escreval("");
+		escreval("3) Algoritmo que verifica senha. Deve-se observar que um texto é um vetor de caracteres e só pode ser comparado com a função ComparaTexto."); // Digite a Senha pipoca
+		escreva("> Digite a Senha: ");
+			leia(senha);
+				se (comparaTexto(senha, "pipoca" == 0)) entao
+					escreval ("Senha correta!");
+			senao 
+				escreval ("Senha incorreta!");
+			fimSe
+				faca //Pergunta Especial
+					escreval("Deseja saber como funciona a função comparaTexto (s/n)? ");
+					leiaCaracter(resposta);
+						enquanto (resposta!='s' e resposta!='n' e resposta!='S' e resposta!='N');
+			se (resposta=='s' ou resposta=='S') entao
+				escreval("- A função comparaTexto possui como objetivo comparar duas variáveis do tipo texto e retornar um valor inteiro informando se as variáveis são iguais ou diferentes. Sua declaração é da seguinte forma: inteiro comparaTexto (texto t1, texto t2). A função recebe como parâmetros dois textos. Como retorno pode-se obter três valores: um valor 0 (zero) caso os dois símbolos sejam iguais, um valor negativo caso o primeiro símbolo discrepante seja menor (em termos de seu valor na tabela ASCII) que o segundo símbolo ou um valor positivo caso o primeiro símbolo discrepante seja maior (novamente em termos de seu valor na tabela ASCII) que o segundo símbolo."); 
+				escreval("- O negócio de em termos de seu valor na tabela ASCII significa ser alfabeticamente maior ou menor. A letra a é alfabeticamente menor que a letra b, ou seja, vem antes no dicionário.");
+		senao
+		escreval("Que bom que entende.");
+		fimSe
+
+fimPrincipal

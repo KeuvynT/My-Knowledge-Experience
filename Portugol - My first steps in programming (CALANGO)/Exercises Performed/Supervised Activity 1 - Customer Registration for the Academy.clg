@@ -1,0 +1,66 @@
+algoritmo keuvynTeixeiradeJesus;
+
+// Synthesis [EU-US]
+// Purpose: Register customers for an Academy.
+// Entry: Full name, e-mail, CPF, Birth Date, Area Code + Telephone, Area Code + Phone, Sex.
+// Output: Shows the data of the registered person on the screen.
+
+// Síntese
+//  Objetivo: Cadastrar clientes para uma Academia. 
+//  Entrada : Nome Completo, e-mail, CPF, Data de Nascimento, DDD + Celular, DDD + Telefone, Sexo.
+//  Saída   : Mostra os dados da pessoa cadastrada na tela.
+
+principal
+
+	// Declarations/Declarações
+		caracter sexo,confirma;
+		texto	nomeCompleto, cpf, email, datadeNascimento, telefoneCelular, telefoneFixo;
+	// Instructions/Instruções
+	// Title/Título
+		escreval("--PROGRAMA PARA CADASTRO DE CLIENTE--");
+		escreval("Console| Olá! Vou te ajudar a cadastrar um cliente para sua academia. Me informe os dados a seguir.");
+	// Quiz/Questionário
+		escreva("Pergunta| Nome Completo: ");
+			leia(nomeCompleto);
+		escreva("Pergunta| Data de Nascimento(Dia/Mês/Ano): ");
+			leia(datadeNascimento);
+		escreva("Pergunta| Sexo, M para Masculino e F para Feminino: ");
+			leiaCaracter(sexo);
+		escreva("Pergunta| Nº de CPF: ");
+			leia(cpf);
+		escreva("Pergunta| E-mail para contato: ");
+			leia(email);
+		escreva("Pergunta| Celular (DDD+Celular): ");
+			leia(telefoneCelular);
+		escreva("Pergunta| (DDD+Fixo): ");
+			leia(telefoneFixo);
+	// Data Confirmation/Confirmação de Dados
+		escreval("Console| Tudo Certo! Vamos apenas confirmar então. Estes dados estão corretos?");
+		escreval("Nome Completo: ", nomeCompleto, ".");
+		escreval("Data de Nascimento: ", datadeNascimento, ".");
+			se (sexo == 'm') entao
+				escreval("Sexo: Masculino.");
+		senao
+			escreval("Sexo: Feminino");
+		fimSe
+		escreval("CPF nº: ", cpf, ".");
+		escreval("E-mail: ", email, ".");
+		escreval("Telefone Celular: ", telefoneCelular, ".");
+		escreval("Telefone Fixo: ", telefoneFixo, ".");
+		escreval("Pergunta| Digite S para sim e N para não.");
+			leiaCaracter(confirma);
+		enquanto (confirma!='n' e confirma!='N'e confirma!='S' e confirma!='s') faca
+			escreval("Pergunta| Digite S para sim ou N para não.");
+			leiaCaracter(confirma);
+		fimEnquanto
+	// Conclusion/Conclusão
+		se (confirma == 'n' ou confirma == 'N' ) entao //Caso confirma seja não.
+			escreval("Console| Ups! Re-abra o programa para reiniciar um cadastro para seu cliente.");
+		senao
+		fimSe
+			se (confirma == 's' ou confirma == 'S') entao //Caso confirma seja sim.
+				escreva("Console| Meus parabéns! Seu cliente foi cadastrado com Sucesso!");
+			senao
+		fimSe
+		
+fimPrincipal

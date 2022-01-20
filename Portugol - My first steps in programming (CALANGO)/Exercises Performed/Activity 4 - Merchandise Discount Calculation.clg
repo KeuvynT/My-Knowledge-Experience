@@ -1,0 +1,31 @@
+algoritmo keuvynTeixeiradeJesus;
+
+// Synthesis [EU-US]
+// Purpose: Registration and Calculation of discount of (10%) on the Merchandise in R$ with (2 places after the comma).
+// Entry: Merchandise name, value, discount value.
+// Output: Show the amount to be paid in cash and the discount granted in R$ with (2 houses after the comma).
+
+// Síntese [PT-BR]
+//  Objetivo: Cadastro e Calculo de desconto de (10%) sobre a Mercadoria em R$ com (2 casas depois da vírgula).
+//  Entrada : Nome da Mercadoria, valor, valor de desconto.
+//  Saída   : Mostrar valor a ser pago a vista e o desconto concedido em R$ com (2 casas após a virgula).
+
+principal
+
+	// Declarations/Declarações
+		texto mercadoria;
+		real valor1, valorDsc, desconto, valoraVista;
+	// Instructions/Instruções
+		escreval("--CALCULO DE MERCADORIA E DESCONTO DE 10%--");
+	// Quiz/Questionário
+		escreva("Digite o Nome da Mercadoria: ");
+			leia(mercadoria); //Nome do item.
+		escreva("> Informe o valor: ");
+			leia(valor1);
+			desconto = (valor1*10)/100;
+			valoraVista = valor1 - (valor1*10)/100;
+	// Conclusion/Conclusão
+		escreval("");
+		escreval("O Item ", mercadoria, " sairá a vista por: R$ ", valoraVista:3:2, " reais. Com desconto de R$ ", desconto:3:2," reais.");
+
+fimPrincipal

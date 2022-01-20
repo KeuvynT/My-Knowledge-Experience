@@ -1,0 +1,89 @@
+algoritmo keuvynTeixeiradeJesus;
+
+// Synthesis [EU-US]
+// Purpose: Read the area code and inform which city corresponds to the area code. If you inform a DDD that is not in the table, inform that it does not exist.
+// Entry: DDD.
+// Output: City name or number does not exist.
+
+// Síntese [PT-BR]
+//  Objetivo: Ler o DDD e informar qual cidade corresponde ao DDD. Caso informe um DDD que não está na tabela, informar que este não existe.
+//  Entrada : DDD.
+//  Saída   : Nome da Cidade ou Numero inexistente.
+
+principal
+
+	// Declarations/Declarações
+		inteiro ddd;
+		inteiro dddES;
+	// Instructions/Instruções
+		escreval("---DE ONDE É O DDD?---");
+	// Quiz/Questionário
+		escreva("Digite o DDD que deseja saber: ");
+		leia(ddd); 
+	//WHERE'S THE DDD FROM? - BY THE IF METHOD/DE ONDE É O DDD? - PELO MÉTODO DE SE
+		enquanto (ddd!=11 e ddd!=21 e ddd!=31 e ddd!=41 e ddd!=48 e ddd!=51 e ddd!=61) faca //Caso o DDD informado seja inexistente.
+			escreval("> O DDD informado não existe.");
+			escreval("> Os DDDs existentes são (11, 21, 31, 41, 48, 51 e 61)");
+			escreva("> Digite o DDD que deseja consultar: ");
+				leia(ddd);
+		fimEnquanto
+			se(ddd==11)entao
+				escreva("Este DDD é de São Paulo-SP (São Paulo).");
+			senao
+		fimSe
+			se(ddd==21)entao
+				escreva("Este DDD é de Rio de Janeiro-RJ (Rio de Janeiro).");
+			senao
+		fimSe
+			se(ddd==31)entao
+				escreva("Este DDD é de Belo Horizonte-MG.");
+			senao
+		fimSe
+			se(ddd==41)entao
+				escreva("Este DDD é de Curitiba-PR.");
+			senao
+		fimSe
+			se(ddd==48)entao
+				escreva("Este DDD é de Florianópolis-SC (Santa Catarina).");
+			senao
+		fimSe
+			se(ddd==51)entao
+				escreva("Este DDD é de Porto Alegre-RS (Rio Grande do Sul).");
+			senao
+		fimSe
+			se(ddd==61)entao
+				escreva("Este DDD é de Belo Brasília-DF (Distrito Federal).");
+			senao
+		fimSe
+	//WHERE'S THE DDD FROM? - BY METHOD OF CHOICE/DE ONDE É O DDD? - PELO MÉTODO DE ESCOLHA
+	escreval("");
+	escreval("");
+	escreva("Q) Agora pelo método de escolha. Informe o ddd que deseja consultar: ");
+	leia(dddES);
+	escolha (dddES)
+		caso 11
+			escreva("Este DDD é de São Paulo-SP (São Paulo).");
+			interrompa;
+		caso 21
+			escreva("Este DDD é de Rio de Janeiro-RJ (Rio de Janeiro).");
+			interrompa;
+		caso 31
+			escreva("Este DDD é de Belo Horizonte-MG.");
+			interrompa;
+		caso 41
+			escreva("Este DDD é de Curitiba-PR.");
+			interrompa;
+		caso 48
+			escreva("Este DDD é de Florianópolis-SC (Santa Catarina).");
+			interrompa;
+		caso 51
+			escreva("Este DDD é de Porto Alegre-RS (Rio Grande do Sul).");
+			interrompa;
+		caso 61
+			escreva("Este DDD é de Belo Brasília-DF (Distrito Federal).");
+			interrompa;
+		outroCaso // Otherwhise/Caso ddd não exista
+			escreva("O DDD informado não existe. Os existentes são (11, 21, 31, 41, 48, 51 e 61).");
+	fimEscolha
+	
+fimPrincipal

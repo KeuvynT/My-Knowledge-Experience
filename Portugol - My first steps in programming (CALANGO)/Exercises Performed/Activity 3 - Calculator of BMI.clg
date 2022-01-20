@@ -1,0 +1,31 @@
+algoritmo keuvynTeixeiradeJesus;
+
+// Synthesis [EU-US]
+// Purpose: Receive the weight and height of a person and inform BMI (Body Mass Index), knowing that the BMI is given by dividing weight by height squared.
+// Entry: Weight and Height.
+// Output: BMI.
+
+// Síntese [PT-BR]
+// Objetivo: Receber o peso e altura de uma pessoa e informar IMC(Indice de Massa Corporal), sabendo que o IMC é dado pela divisão do peso pela altura ao quadrado.
+// Entrada : Peso e Altura.
+// Saída   : IMC.
+
+principal
+
+	// Declarations/Declarações
+		inteiro peso;
+		real imc, altura;
+	// Instructions/Instruções
+		escreval("---CALCULADORA DE IMC---");
+	// Quiz/Questionário
+		escreva("Digite o peso em (KG): ");
+			leia(peso);
+		escreva("Digite sua altura em (CM): ");
+			leia(altura);
+		escreval("Agora farei um breve calculo para informar seu IMC.");
+			imc = peso / (altura*altura); // Calculo do IMC.
+	// Conclusion/Conclusão
+		escreval("");
+		escreva("> Pronto! Seu IMC (Índice de Massa Corporal) é de ", imc:3:3, ".");
+		
+fimPrincipal

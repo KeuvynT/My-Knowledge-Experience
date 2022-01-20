@@ -1,0 +1,51 @@
+algoritmo keuvynTeixeiradeJesus;
+
+// Synthesis [EU-US]
+// Purpose: Airline customer registration.
+// Entry: Full Name, Gender, CPF, Telephone, Number of Bags, Total weight of bags.
+// Output: Present the registered data.
+
+// Síntese [PT-BR]
+//  Objetivo: Cadastro de cliente para Companhia Aérea (Atividade 2).
+//  Entrada : Nome Completo, Sexo, CPF, Telefone, Quantidade de Malas, Peso total das malas.
+//  Saída   : Apresentar os dados do cadastrado.
+
+principal
+
+	// Declarations/Declarações
+		texto nomeCompleto, CPF, telefone;
+		caracter sexo;
+		inteiro idade,qtdMalas;
+		real psMalas;
+	// Instructions/Instruções
+	// Title/Título
+		escreval("--CADASTRO DE CLIENTE DA EMPRESA AIRLINES--");
+	// Quiz/Questionário
+		escreval("Olá! Sou seu assistente, irei te ajudar a cadastrar seu cliente para sua empresa, me informe os seguintes dados.");
+		escreva("Nome Completo: ");
+			leia(nomeCompleto);
+		escreva("Sexo, digite M se for Homem ou F se for Mulher: ");
+			leiaCaracter(sexo);
+		escreva("Nº de CPF: ");
+			leia(CPF);
+		escreva("Telefone de contato: ");
+			leia(telefone);
+		escreva("Quantidade de malas do cliente: ");
+			leia(qtdMalas);
+		escreva("Peso Total das malas do cliente em (KG): ");
+			leia(psMalas);
+	// Conclusion/Conclusão
+		escreval("Tudo certo! Seu cliente foi cadastrado com Sucesso. Estes são os dados:");
+		escreval("Nome do Cliente: ", nomeCompleto, ".");
+			se (sexo == 'm') entao
+				escreval("Sexo: Masculino.");
+		senao
+			escreval("Sexo: Feminino.");
+		fimSe
+		escreval("CPF: ", CPF, ".");
+		escreval("Telefone para contato: ", telefone, ".");
+		escreval("Quantidade de Malas: ", qtdMalas, ".");
+		escreval("Peso Total das Malas em KG: ", psMalas, ".");
+		escreva("Seja Bem-Vindo!!");
+		
+fimPrincipal

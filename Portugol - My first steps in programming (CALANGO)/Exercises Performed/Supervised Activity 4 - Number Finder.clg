@@ -1,0 +1,89 @@
+algoritmo keuvynTeixeiradeJesus;
+
+// Synthesis [EU-US]
+// Purpose: Find a number in a vector of 100 sequential numbers from 1 to 100.
+
+/*Requirements:
+1. Numbers must be generated and stored in an array at runtime.
+2. The search algorithm to be implemented is the binary search.
+3. The user must enter the number they want to check if they are in the vector.
+4. The system should notify the user if they enter a number between 1 and 100. If they enter a number outside this range, the system should inform the user that it only accepts numbers from 1 to 100.
+5. State how many comparisons were needed to find the number.
+6. Use comment in the Code.
+7. The code must be done in Calango.
+// Entry: Number (To be located).
+// Output: Located Number.
+*/
+
+// Síntese [PT]
+//  Objetivo: Localizar um número em um vetor de 100 números sequenciais de 1 a 100.
+/*	Requisitos:
+	1. Os números deverão ser gerados e armazenados em um vetor no momento da execução.
+	2. O algoritmo de busca a ser implementado é o de busca binária.
+	3. O usuário deverá entrar com o número que deseja verificar se está no vetor.
+	4. O sistema deve notificar o usuário caso digite um número entre 1 e 100. Se ele digitar um número fora desse intervalo o sistema deverá informar que só aceita números de 1 a 100.
+	5. Informe quantas comparações foram necessárias para localizar o número.
+	6. Use comentário no Código.
+	7. O código deve ser feito no Calango. 
+*/
+//  Entrada : Numero (A ser localizado).
+//  Saída   : Numero localizado.
+
+principal
+
+	// Declarations/Declarações
+		inteiro vetor[100], ordem, numero;
+		inteiro contador; // Contador de buscas
+		inteiro numInicial, numCentral, numFinal;
+		logico numEncontrado;
+	// Instructions/Instruções
+		escreval("--BUSCADOR DE NÚMERO--");
+	// Assigning values to Vector[100]/Atribuindo valores para Vetor[100]
+		para (ordem de 0 ate 99 passo 1) faca
+			vetor[ordem] = ordem+1;
+		fimPara
+	// Number Finder/Buscador de número
+		escreva("> Digite o número que deseja encontrar entre (1-100): ");
+		leia(numero);
+		enquanto (numero<1 ou numero>100) faca // If number entry is invalid/Caso entrada de numero seja inválida
+			escreva("> Número inválido. Digite um número entre (1-100): ");
+			leia(numero);
+		fimEnquanto
+	// Variables to Search/Variáveis para Buscar
+		numInicial = 1;
+		numFinal = 100;
+		numEncontrado = falso;
+		contador = 0;
+	// Comparing Number to Vector Values/Comparando Número aos Valores do Vetor
+		enquanto (numInicial <= numFinal e nao numEncontrado) faca
+			contador = contador+1;
+			escreval("");
+			escreval("--",contador," º BUSCA--");
+			numCentral = (numInicial+numFinal)/2;
+			escreval("> Nº Inicial: ", numInicial);
+			escreval("> Nº Central: ", numCentral);
+			escreval("> Nº Final: ", numFinal);
+				se (vetor[numCentral] == numero) entao // If Number is found 1st Attempt/Caso Numero seja encontrado 1º Tentativa
+					numEncontrado = verdadeiro;
+					escreval("> R: Seu numero ", numero," foi encontrado.");
+				senao
+					escreval("> R: Seu numero ", numero," não foi encontrado.");
+					escreval("");
+					se (vetor[numCentral] > numero) entao
+						numFinal = numCentral -1; // Novo Número central
+						escreval("Nº central agora será: ", vetor[numCentral]);
+						escreval("Nº ",numero," é MENOR do que o Nº central: ", vetor[numCentral]);
+						escreval("Nº Final agora será : ", numFinal);
+					senao
+						numInicial = numCentral +1; // Novo Número Central
+						escreval("Nº central agora será: ", vetor[numCentral]);
+						escreval("Nº ",numero," é MAIOR do que o nº central: ", vetor[numCentral]);
+						escreval("Nº Final agora será: ", numFinal);
+					fimSe
+				fimSe
+			fimEnquanto
+	// CONCLUSÃO
+	escreval("");
+	escreval("Quantidade de buscas necessárias para encontrar o número ", numero," foi de: ", contador," buscas.");
+
+fimPrincipal

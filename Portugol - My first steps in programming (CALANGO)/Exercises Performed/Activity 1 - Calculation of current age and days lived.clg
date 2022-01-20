@@ -1,0 +1,28 @@
+algoritmo keuvynTeixeiradeJesus;
+
+// Synthesis [EU-US]
+// Purpose: Read the person's year of birth and calculate their age together with the number of days lived..
+// Entry: Year of birth.
+// Output: Age and Number of days lived.
+
+// Síntese [PT-BR]
+//  Objetivo: Ler o ano de nascimento da pessoa e calcular a idade que ela tem juntamente com o nº de dias vividos.
+//  Entrada : Ano de nascimento.
+//  Saída   : Idade e Nº de dias vividos.
+
+principal
+
+	// Declarations/Declarações
+		inteiro dtNascimento, idadeAt, diasViv;
+	// Instructions/Instruções
+		escreval("--CALCULADORA DE IDADE E DIAS VIVIDOS--");
+	// Operation/Operação
+		escreva("Digite o ano em que nasceu: ");
+			leia(dtNascimento);
+				idadeAt = 2021 - dtNascimento; // Age Calculation/Calculo de Idade
+					diasViv = idadeAt * 365; // Days Lived Calculation/Calculo de Dias Vividos
+	// Conclusion/Conclusão
+		escreval("Você deve ter ", idadeAt, " anos de idade, ou ainda fará esta idade este ano.");
+		escreva("Também vale informar de que você já viveu cerca de ", diasViv, " dias.");
+
+fimPrincipal

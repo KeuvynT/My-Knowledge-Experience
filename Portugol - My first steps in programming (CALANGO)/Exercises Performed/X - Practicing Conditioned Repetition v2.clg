@@ -1,0 +1,55 @@
+algoritmo keuvynTeixeiradeJesus;
+
+// Synthesis [EU-US]
+// Purpose: Calculate the average of the grades of the class.
+// Entry: Grades from the students in the class.
+// Output: Average of grades.
+
+// Síntese [PT-BR]
+//  Objetivo: Calcular a Média das notas da turma.
+//  Entrada : Nota dos estudantes da turma.
+//  Saída   : Média das notas.
+
+principal
+
+	// Declarations/Declarações
+		inteiro alunoEx1; // Exercise 1 - Average of (N) Student by the Do-While method, while the answer is (S)./Exercício 1 - Media de (N) Aluno pelo método Faça-Enquanto, enquanto resposta for (S).
+		real somaEx1, notaEx1, mediaEx1;
+		caracter respostaEx1;
+		inteiro alunoEx2; // /Exercise 2 - Calculate the Mean of (N) students by the Do-While method, if an informed grade is 0 for operation.Exercício 2 - Calcule a Média de (N) alunos pelo método Faça-Enquanto, se uma nota informada for 0 para operação.
+		real somaEx2, notaEx2, mediaEx2;	
+	// Instructions/Instruções
+		escreval("--- DESENVOLIMENTO DA FUNÇÃO ENQUANTO 2---");
+	//1 - AVERAGE OF N STUDENTS BY THE DO-WHILE METHOD (DOES THE QUESTION AFTER FINISHING 1 TURN)/MEDIA DE N ALUNOS PELO MÉTODO FAÇA-ENQUANTO (PERGUNTA APÓS CONCLUIR 1 VOLTA)
+		escreval("1) Calcule a Media de (N) alunos pelo método Faça-Enquanto.");
+		somaEx1 = 0;
+		alunoEx1 = 1;
+			faca
+				escreva("> Digite a nota do ", alunoEx1,"º aluno: ");
+					leia(notaEx1);
+					somaEx1 = notaEx1 + somaEx1;
+					alunoEx1 = alunoEx1 + 1;
+				escreva("Deseja informar outra nota? (s/n)");
+					leiaCaracter(respostaEx1);
+			enquanto (respostaEx1 == 's');
+				mediaEx1 = somaEx1/2;
+		escreval("> A media dos alunos informados é de ", mediaEx1:3:1);
+	//2 - DO-WITH IF METHOD (QUESTION AFTER FINISHING 1 TURN)/MÉTODO FAÇA-ENQUANTO COM SE (PERGUNTA APÓS CONCLUIR 1 VOLTA)
+		escreval("");
+		escreval("2) Calcule a Media de (N) alunos da mesma forma porém, se a nota informada for menor do que (0), para operação.");
+			somaEx2 = 0;
+			alunoEx2 = 1;
+		escreval("");
+			faca
+				escreval("> Obs: Nota negativa encerra a operação.");
+				escreva("Digite a nota do ", alunoEx2,"º aluno: ");
+				leia(notaEx2);
+					se (notaEx2>=0) entao
+						somaEx2 = notaEx2 + somaEx2;
+						alunoEx2 = alunoEx2 + 1;
+					fimSe	
+			enquanto (notaEx2>=0); // Roda até nota for menor que zero
+				mediaEx2 = somaEx2/2; // Calculo da média das notas
+				escreva("> A sua média é ", mediaEx2:3:1,".");
+				
+fimPrincipal

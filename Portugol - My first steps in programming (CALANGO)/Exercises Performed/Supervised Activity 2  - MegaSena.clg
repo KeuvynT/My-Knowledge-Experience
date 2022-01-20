@@ -1,0 +1,39 @@
+algoritmo keuvynTeixeiradeJesus;
+
+// Synthesis [EU-US]
+// Purpose: Find all possible combinations and show the total number of combinations of a luck card.
+// Entry: Limit Card.
+// Output: Possible combinations and total number of combinations.
+
+// Síntese [PT-BR]
+//  Objetivo: Descobrir todas as combinações possíveis e mostrar o nº total de combinações.
+//  Entrada : Limite da Cartela. 
+//  Saída   : Combianções possíveis e nº total de combinações.
+
+principal
+
+	// Declarations/Declarações
+		inteiro nCartela; // Cartela (n)
+		inteiro escolha1, escolha2, escolha3, escolha4, escolha5, escolha6; // Choice Possibilities/Possibilidades de Escolhas
+	// Instructions/Instruções
+		escreval("--CALCULO DE COMBINAÇÕES POSSÍVEIS P/ MEGASENA---");
+			nCartelalc = 1; // Contador para cartela n
+				para (escolha1 de 1 ate 19 passo 1) faca // Para 1 ate 19
+					para (escolha2 de escolha1+1 ate 20 passo 1) faca
+				para (escolha3 de escolha2+1 ate 20 passo 1) faca
+					para (escolha4 de escolha3+1 ate 20 passo 1) faca
+				para (escolha5 de escolha4+1 ate 20 passo 1) faca
+					para (escolha6 de escolha5+1 ate 20 passo 1) faca
+	//Impressão/Printing
+			escreval("Cartela Nº ", calc," / Possibilidade: ",escolha1,",",escolha2,",",escolha3,",",escolha4,",",escolha5,",",escolha6,".");
+			calc = calc+1;
+		fimPara
+			fimPara
+					fimPara
+				fimPara
+			fimPara
+		fimPara
+	//Conclusão
+	escreval("Total de Combinações possíveis: ", calc);
+	
+fimPrincipal

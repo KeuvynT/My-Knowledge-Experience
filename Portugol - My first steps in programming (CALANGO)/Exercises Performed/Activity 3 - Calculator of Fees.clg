@@ -1,0 +1,32 @@
+algoritmo keuvynTexeiradeJesus;
+
+// Synthesis [EU-US]
+// Purpose: Inform how many months it takes for the initial deposited amount to reach 10 thousand reais.
+// Entry: Initial Value, 1.5% per month.
+// Output: Number of Months required for 10,000.
+
+// Síntese
+//  Objetivo: Informar quantos meses leva para o valor inicial depositado chegar à 10 mil reais.
+//  Entrada : Valor Inicial, 1.5% ao mês.
+//  Saída   : Numero de Meses necessário para 10.000.
+
+principal
+
+	// Declarations/Declarações
+		inteiro rotacao;
+		real valorInicial, valortotal;
+	// Instructions/Instruções
+		escreval("---CALCULO DE JUROS---");
+		escreval("1) Vamos descobrir quanto tempo leva para seu dinheiro chegar a 10.000 reais.");
+		escreva("> Digite o Valor Inicial: R$ ");
+			leia(valorInicial);
+			valorInicial = valorInicial/1000; // To regulate the actual data type/Para regular o tipo de dado real
+	// Variables/Variáveis
+		rotacao= 0;
+		enquanto (valorInicial<=10.000) faca
+			valorInicial = valorInicial*(0.15)+valorInicial;
+			rotacao = rotacao+1;
+		fimEnquanto
+		escreval("Você precisará de ", rotacao-1," meses para obter R$ ", valorInicial:2:3, " reais.");
+		
+fimPrincipal

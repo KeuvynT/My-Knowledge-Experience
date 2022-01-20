@@ -1,0 +1,60 @@
+algoritmo keuvynTeixeiradeJesus;
+
+// Synthesis [EU-US]
+// Purpose: Develop logical procedures using the Multi-choice method.
+// Advantage: Allows faster processing by the computer, but it is not applicable in all cases as (if).
+// Entry: Values.
+// Output: Result of logic.
+
+// Síntese [PT-BR]
+// Objetivo: Desenvolver procedimentos lógicos pelo método de Multiescolha.
+// Vantagem: Permite um processamento mais rápido por parte do computador, porém não é aplicavél em todos os casos como (se).
+// Entrada : Valores.
+// Saída   : Resultado da lógica.
+
+principal
+
+	// Declarations/Declarações
+		inteiro numeroEscolha1;
+		inteiro numeroSE;
+	// Instructions/Instruções
+		escreval("---PROCESSAMENTO LÓGICO POR MÉTODO DE MULTI-ESCOLHA---");
+		escreval("Introdução: Vamos trabalhar um raciocínio lógico pelo método de escolha. Por meio dela só é possível verificar a igualdade de 1 valor, que sendo verdadeiro, execetuará um comando (ou um bloco de comando).");
+		escreval("");
+	// MULTI-CHOICE METHOD/MÉTODO DE MULTI-ESCOLHA
+		escreval("--MÉTODO MULTI-ESCOLHA");
+		escreva("Escolha entre os números 3 ou 5 e receba uma mensagem:");
+			leia(numeroEscolha1);
+				enquanto (numeroEscolha1!=3 e numeroEscolha1!=5) faca
+					escreva("Você não digitou um número valido. Escolha 3 ou 5: ");
+					leia(numeroEscolha1);
+				fimEnquanto
+			escolha(numeroEscolha1)
+				caso 3
+					escreval("Você escolheu o número 3. | João 3:6 - Por que Deus amou o mundo de tal maneira, que deu o seu filho unigenito, para que todo aquele que nele crê, não pereça, mas tenha a vida eterna. (Fonte: Bíblia Sagrada).");
+				interrompa;
+				caso 5
+					escreval("Você escolheu o número 5. | Lucas 5:23 - Qual é mais fácil? dizer: Os teus pecados te são perdoados; ou dizer: Levanta-te, e anda?. (Fonte: Bíblia Sagrada).");
+				interrompa;
+				outroCaso
+					escreval("Você não escolheu nenhum dos números corretos.");
+				interrompa;
+			fimEscolha
+	// IF METHOD/MÉTODO SE
+		escreval("");
+		escreval("--MÉTODO SE");
+		escreval("Agora será feito a mesma operação porém desta vez programada pelo método de SE.");
+		escreva("Escolha entre os números 3 ou 5 e receba uma mensagem:");
+			leia(numeroSE);
+				enquanto (numeroSE!=3 e numeroSE!=5) faca
+					escreva("Você não digitou um número valido. Escolha 3 ou 5: ");
+					leia(numeroSE);
+				fimEnquanto
+			se (numeroSE == 3) entao
+				escreva("Você escolheu o número 3. | João 3:6 - Por que Deus amou o mundo de tal maneira, que deu o seu filho unigenito, para que todo aquele que nele crê, não pereça, mas tenha a vida eterna. (Fonte: Bíblia Sagrada)."); fimSe
+				se (numeroSE == 5) entao // Caso escolha 5
+					escreva("Você escolheu o número 5. | Lucas 5:23 - Qual é mais fácil? dizer: Os teus pecados te são perdoados; ou dizer: Levanta-te, e anda?. (Fonte: Bíblia Sagrada)."); fimSe
+					se (numeroSE <3 ou numeroSE==4 ou numeroSE>5) entao
+						escreva("Você não escolheu nenhum valor correto, por favor escolha 3 ou 5."); fimSe
+
+fimPrincipal

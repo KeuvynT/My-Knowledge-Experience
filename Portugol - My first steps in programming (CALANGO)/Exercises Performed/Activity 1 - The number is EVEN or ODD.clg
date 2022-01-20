@@ -1,0 +1,29 @@
+algoritmo keuvynTeixeiradeJesus;
+
+// Synthesis [EU-US]
+// Purpose: Check if the number is EVEN or ODD.
+// Entry: Number to be verified.
+// Output: Inform if the number is EVEN or ODD.
+
+// Síntese [PT-BR]
+//  Objetivo: Verificar se o número é PAR ou IMPAR.
+//  Entrada : Número a ser verificado.
+//  Saída   : Responder se é PAR ou IMPAR.
+
+principal
+
+	// Declarations/Declarações
+		inteiro numero,resto;
+	// Instructions/Instruções
+		escreval("---CLASSIFICAÇÃO DE NÚMEROS PAR OU IMPAR----");
+		escreva("Q) Digite um número qualquer e informarei se este é par ou impar: ");
+		leia(numero);
+	// Verification if is EVEN or ODD/Verificação se é PAR ou Impar.
+		resto = numero%2; // Can be % or mod/Poder ser % ou mod
+		se (resto == 0) entao // Case be EVEN/Caso seja PAR
+			escreva("> O número ", numero," é PAR.");
+		senao // Case be ODD/Caso Seja IMPAR
+			escreva("> O número ", numero," é IMPAR. Pois ficará com resto ", resto);
+		fimSe
+		
+fimPrincipal

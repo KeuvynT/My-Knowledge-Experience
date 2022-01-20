@@ -1,0 +1,34 @@
+algoritmo keuvynTeixeiradeJesus;
+
+// Synthesis [EU-US]
+// Purpose: Read the person's gender by "m" or "f", identify and print out in full. Do not allow other values.
+// Entry: Name, Gender (m/f).
+// Output: Sex in full.
+
+// Síntese [PT-BR]
+//  Objetivo: Ler o sexo da pessoa por "m" ou "f", identificar e imprimir por extenso. Não permitir outros valores.
+//  Entrada : Nome, Sexo (m/f).
+//  Saída   : Sexo por extenso.
+
+principal
+
+	// Declarations/Declarações
+		caracter sexo;
+	// Instructions/Instruções
+		escreval("--IDENTIFICAÇÃO POR EXTENSO--");
+	// Quiz/Questionário
+		escreva("> Informe o sexo da pessoa (m/f): ");
+		leiaCaracter(sexo); // Caracter M para Masculino e F para Feminino
+		enquanto (sexo != 'm' e sexo != 'f' e sexo != 'M' e sexo != 'F') faca // Invalid case/Caso digito inválido
+			escreva("Digito inválido, digite M para Masculino ou F para Feminino: ");
+			leiaCaracter(sexo); // Caracter M para Masculino e F para Feminino
+		fimEnquanto
+	// Conclusion/Conclusão
+		se (sexo == 'm' ou sexo == 'M') entao // Caso entrada seja M
+			escreval("Seu sexo é Masculino!");
+		fimSe
+		se (sexo == 'f' ou sexo == 'F') entao // Caso entrada seja F
+			escreval("Seu sexo é Feminino!");
+		fimSe
+		
+fimPrincipal

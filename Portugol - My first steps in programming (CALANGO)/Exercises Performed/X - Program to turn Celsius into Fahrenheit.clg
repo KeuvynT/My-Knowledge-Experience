@@ -1,0 +1,26 @@
+algoritmo keuvynTeixeiradeJesus;
+
+// Synthesis [EU-US]
+// Purpose: Read the person's year of birth and calculate their age together with the number of days lived..
+// Entry: Year of birth.
+// Output: Age and Number of days lived.
+
+// Síntese [PT-BR]
+//  Objetivo: Transform any temperatures in Celsius to Fahrenheit.
+//  Entrada : Temperature in Celsius.
+//  Saída   : Temperature in Fahrenheit.
+
+principal
+
+	// Declarations/Declarações
+		real celsius, fahrenheit;
+	// Title/Título
+		escreval("---PROGRAMA DE CONVERSÃO DE CELSIUS EM FAHRENHEIT---");
+	// Operation/Operação
+		escreva("Digite valor de temperatura em Celsius que deseja transformar para Fahrenheit: ");
+			leia(celsius); // Entrada da temperatura em celsius
+			fahrenheit = (celsius * 9) / 5 + 32; // Transformação
+	// Conclusion/Conclusão
+		escreva("A temperatura de ", celsius,"º Celsisus em Fahrenheit é ", fahrenheit, ".");
+
+fimPrincipal

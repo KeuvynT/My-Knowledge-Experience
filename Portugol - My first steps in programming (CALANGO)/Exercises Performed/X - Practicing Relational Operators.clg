@@ -1,0 +1,73 @@
+algoritmo keuvynTeixeiradeJesus;
+
+// Synthesis [EU-US]
+// Purpose: Practice Relational Conditions.
+// Entry: Show the result of logic.
+// Output: Age and Number of days lived.
+
+// Síntese
+//  Objetivo: Praticar Condições Relacionais.
+//  Entrada : Números.
+//  Saída   : Mostrar o resultado da lógica.
+
+principal
+
+	// Declarations/Declarações
+		inteiro resposta, resultExpressao; // Question 1 - True or False with Equal or Different FROM/Questão 1 - Verdadeiro ou Falso com Igual ou Diferente DE
+		inteiro peso; // Question 2 - True or False about Allowed Weight/Questão 2 - Verdadeiro ou Falso sob Peso Permitido
+		real nota; // Question 3 - Greater than or equal to, less than or equal to student grade/Questão 3 - Maior ou Igual, Menor ou Igual para Nota de Aluno
+	// Instructions/Instruções
+		escreval("--TRABALHANDO OS OPERADORES RELACIONAIS--");
+		escreval("> Olá! Vamos trabalhar os operadores relacionais, a começar pelo IGUAL e DIFERENTE.");
+		escreval("");
+	// QUESTION 1 - TRUE OR FALSE WITH EQUAL AND DIFFERENT FROM/QUESTÃO 1 - VERDADEIRO OU FALSO COM IGUAL E DIFERENTE DE
+		escreval("1) Responda a questão (5*3/5+10). Caso você responda corretamente, verdadeiro, diferente, falso.");
+		escreva("> Qual o resultado da expressão (5*3/5+10)? ");
+			leia(resposta);
+		resultExpressao = (5*3/5)+10;
+			se (resposta == resultExpressao) entao
+				escreval("Meus parabéns! Você acertou! A resposta é ", resultExpressao,".");
+		senao
+			se (resposta != resultExpressao) entao
+				escreval("Você errou! Tente novamente mais tarde. Agora, outra questão.");
+		senao
+			fimSe
+		fimSe
+	// QUESTION 2 - TRUE OR FALSE ABOUT WEIGHT PERMISSION/QUESTÃO 2 - VERDADEIRO OU FALSO SOB PERMISSÃO DE PESO
+		escreval("");
+		escreval("2) Agora vamos relacionar MAIOR e MENOR. Supondo que, em uma empresa de Carga e Descarga exista uma exigência minima para o peso do item que deseja transportar.");
+		escreva("> Informe o peso do seu item em (KG). Lhe informaremos se está dentro do permitido: ");
+			leia(peso);
+			se (peso >= 10) entao
+				escreval("Seu produto é permitido! O peso minimo é de 10Kg.");
+			senao
+				se (peso < 10) entao
+					escreval("Seu produto não é permitido!");
+				senao
+			fimSe
+		fimSe
+	// QUESTION 3 - TRUE OR FALSE ABOUT WEIGHT PERMISSION/QUESTÃO 3 - VERDADEIRO OU FALSO SOB PERMISSÃO DE PESO
+		escreval("");
+		escreval("3) Agora vamos relcionar MAIOR OU IGUAl e MENOR OU IGUAL. Supondo que você irá avaliar um aluno de 0-10. Se o aluno tirar 8 ou mais, você irá parabenizá-lo, se tirar 7 ou menos você irá encorajá-lo a melhorar."); 
+		escreva("> Informe uma nota para o aluno: ");
+			leia(nota);
+			se (nota >= 8) entao
+				escreval("Parabéns! A sua nota faz de você um campeão!");
+			senao
+				se (nota < 8) entao
+					escreval("Se esforce um pouco mais e seja o melhor da turma!");
+				senao
+			fimSe
+		fimSe
+	// Conclusion/Conclusão
+		escreval("");
+		escreval("--CONCLUSÃO");
+		escreval("Isto é tudo por hora. Estes foram os Operadores Relacionais, ou seja:");
+		escreval("Igual á: ==");
+		escreval("Diferente de: !=");
+		escreval("Maior: >");
+		escreval("Menor: <");
+		escreval("Maior ou Igual: >=");
+		escreval("Menor ou Igual: <=");
+		
+fimPrincipal

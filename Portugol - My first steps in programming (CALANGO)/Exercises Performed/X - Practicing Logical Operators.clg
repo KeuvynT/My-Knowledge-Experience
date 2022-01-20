@@ -1,0 +1,89 @@
+algoritmo keuvynTeixeiradeJesus;
+
+// Synthesis [EU-US]
+// Purpose: Practicing Logical Operators.
+// Entry: Numbers.
+// Output: Logic Results.
+
+// Síntese [PT-BR]
+//  Objetivo: Desenvolvendo Operadores Lógicos.
+//  Entrada : Números.
+//  Saída   : Resultados Lógicos.
+
+principal
+
+	// Declarations/Declarações
+		real nota nota2; // Exercise 1|2 Student Approval/Exercício 1|2 - Aprovação do Aluno
+		real nota3; // Exercise 3 - Student Approval (Simplified)/Exercício 3 - Aprovação do Aluno (Simplificado)
+		inteiro valor1, valor2, mes;
+	// Instructions/Instruções
+		escreval("---DESENVOLVENDO OPERADORES LÓGICOS---");
+		escreval("Olá! Vamos desenvolver alguns operadores lógicos que servem para comparar (mais de 2 coisas). Vamos desenvolver aqui o SE e o SENAO.");
+		escreval("");
+	// EXERCISE 1 - PASSED OR FAILED STUDENT/EXERCÍCIO 1 - ALUNO APROVADO OU DESAPROVADO
+		escreva("1) Vamos começar com SE e SENÃO. O algoritmo avalia se um aluno foi aprovado ou não, se ele tirar 7 ou mais, aprovado, caso contrário, reprovado. Caso tire 10, parabenizado.");
+		escreva("> Informe a nota do aluno: ");
+			leia(nota);
+				se (nota >= 7) entao
+				escreval("Aprovado.");
+			senao
+			escreval("Reprovado.");
+			fimSe
+	// EXERCISE 2 - IN CASE OF 10, CONGRATULATIONS!/EXERCÍCIO 2 - EM CASO DE 10, PARABENIZAR!
+		escreval("2) Ainda no mesmo caso, vamos fazer uma SELEÇÃO ENCADEADA. Concidere então, se o aluno tirar 7 ou mais, será aprovado, pelo contrário, reprovado. Mas, se tirar 10, será parabenizado.)";
+		escrevaI("> Informe a nota do aluno: ");
+			leia(nota2);
+				se (nota2 >= 7) entao
+				escreval("Aprovado.");
+			senao
+			escreval("Reprovado.");
+			fimSe
+				se (nota2 == 10) entao
+				escreval(" Meus parabéns, nota máxima!");
+			senao
+			fimSe
+	// EXERCISE 3 - PASSED STUDENT (SIMPLIFIED)/EXERCÍCIO 3 - ALUNO APROVADO (SIMPLIFICADO)
+		escreval("3) Ainda no mesmo caso, com o código simplificado.");
+		escreva("> Informe a nota do aluno: ");
+			leia(nota3);
+				se (nota3 >= 7) entao
+				escreva("Aprovado.");
+						se (nota3 == 10) entao 
+						escreval("Meus parabéns, você é um aluno exemplar. Nota máxima!");
+						fimSe
+					senao
+					escreval("Reprovado.");
+				fimSe
+	// EXERCISE 4 - MONTH OF BIRTH IN FULL (IF METHOD)/EXERCÍCIO 4 - MÊS DE NASCIMENTO POR EXTENSO (MÉTODO SE)
+		escreval("4) Algoritmo que solicita o número do mês que a pessoa nasceu e em seguida o mostra por extenso." );
+		escreval("Informe o mês em que nasceu: ");
+		leia(mes);
+		escolha (mes)
+			caso 1
+				escreva("Você nasceu no mês de Janeiro."); interrompa;
+			caso 2
+				escreva("Você nasceu no mês de Fevereiro."); interrompa; 
+			caso 3
+				escreva("Você nasceu no mês de Março."); interrompa;
+			caso 4
+				escreva("Você nasceu no mês de Abril."); interrompa;
+			caso 5
+				escreva("Você nasceu no mês de Maio."); interrompa;
+			caso 6
+				escreva("Você nasceu no mês de Junho."); interrompa;
+			caso 7
+				escreva("Você nasceu no mês de Julho."); interrompa;
+			caso 8
+				escreva("Você nasceu no mês de Agosto."); interrompa;
+			caso 9
+				escreva("Você nasceu no mês de Setembro."); interrompa;
+			caso 10
+				escreva("Você nasceu no mês de Outubro."); interrompa;
+			caso 11
+				escreva("Você nasceu no mês de Novembro."); interrompa;
+			caso 12
+				escreva("Você nasceu no mês de Dezembro."); interrompa;
+			outroCaso
+				escreva("Este valor informado não refere-se a nenhum mês.");
+				
+fimPrincipal

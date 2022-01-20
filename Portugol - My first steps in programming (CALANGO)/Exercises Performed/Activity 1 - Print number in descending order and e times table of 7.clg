@@ -1,0 +1,51 @@
+algoritmo keuvynTeixeiradeJesus;
+
+// Synthesis [EU-US]
+// Purpose		A: Read the number entered by the user and print all numbers before him in descending order to zero.
+// Entry		A: Entry Number.
+// Output		A: User number printing up to 0 in descending order.
+// Purpose		B: Print the Times Table of 7 without using Escreva.
+// Entry		B: Entry Number.
+// Output		B: Printing the times table for number 7.
+
+// Síntese [PT-BR]
+//  Objetivo 	A: Leia o número informado pelo usuário e imprima todos os anteriores números a ele em ordem decrescente até zero.
+//  Entrada 	A: Número de Entrada.
+//  Saída 		A: Impressao do numero do usuário até 0 em ordem decrescente.
+//  Objetivo 	B: Imprima a Tabuada de 7 sem utilizar Escreva.
+//  Entrada 	B: Número de Entrada.
+//  Saída 		B: Impressao da tabuada do número 7.
+
+principal
+
+	// Declarations/Declarações
+		inteiro numero, ordem, decrescimo;	
+		inteiro ordem2, tabuada;
+		caracter numero2;
+	// Instructions/Instruções
+	// Letter A - Number in Drecreasing Order/Letra A - Número em Ordem decrescente
+		escreval("---ATIVIDADE 01 NUMERO DECRESCENTE---");
+		escreval("A) Ler numero informado e diminui-lo até 0 com impressão.");
+		escreva("> Digite um numero: ");
+		leia(numero); // Numero a ser decrescido
+		para (ordem de 0 ate numero passo 1) faca
+			decrescimo = numero-ordem;
+			escreval(numero, "-", ordem,"= ", decrescimo);
+		fimPara
+	// Letter B - Times Table without use Escrva/Letra B - Tabuada Sem Utilizar Escreva
+		escreval("");
+		escreval("B) Tabuada de Sete(7) sem utilizar escreva.");
+		escreva ("> Digite 7 para revelar a tabuada: ");
+		leiaCaracter(numero2); // Requires digit 7/Requer digito 7
+		enquanto (numero2!='7') faca
+			escreval("Você não digitou o numero correto. Digite 7 para revelar a tabuada: ");
+			leiaCaracter(numero2);
+		fimEnquanto
+		escreval(""); // Quebra de linha
+		escreval("--TABUADA DE 7");
+		para (ordem2 de 0 ate 10 passo 1) faca
+			tabuada = 7*ordem2; // Calculca a tabuada por rotação de ordem
+			escreval("7x",ordem2," = ", tabuada); // Mostra o resultado por rotação de ordem
+		fimPara
+		
+fimPrincipal

@@ -1,0 +1,33 @@
+algoritmo keuvynTeixeiradeJesus;
+
+// Synthesis [EU-US]
+// Purpose: Make an algorithm that reads two positive integer values: x and y. The algorithm must calculate and write the power of x by y, that is, x to the y. Example: for x=3 and y=2 the result will be 9 = 3 * 3. The command to must be used to calculate the power. Therefore, to carry out the activity, you should not use the ready command (function) of Calango.
+// Entry: X Values, Y Values,.
+// Output: Potency result using (for).
+
+// Síntese [PT-BR]
+// Objetivo: Faça um algoritmo que leia dois valores inteiros e positivos: x e y. O algoritmo deve calcular e escrever a potência de x por y, ou seja, x elevado a y. Exemplo: para x=3 e y=2 o resultado será 9 = 3 * 3. Deve ser utilizado o comando para para calcular a potência. Portanto para realizar a atividade não deverá utilizar o comando (função) pronto do Calango.
+// Entrada : Valores de X, Valores de Y,
+// Saída   : Resultado da potência utilizando (para).
+
+principal
+
+	// Declarations/Declarações
+		inteiro x, y;
+		inteiro ordem, potencia;
+	// Instructions/Instruções
+		escreval("---CALCULO DE POTÊNCIA UTILIZANDO (PARA)---");
+		escreval("> Vamos calcular uma potência.");
+	// Entry of Numbers for Base and Exponent/Entrada de Números para Base e Expoente
+		escreva("Digite um numero para base: ");
+			leia(x);
+		escreva("Digite um numero para o expoente: ");
+			leia(y);
+	// Y) It is the exponent of the base (X)/(Y) É o expoente da base (X)
+		para (ordem de 1 ate y passo 1) faca
+			potencia = x*x;
+		fimPara
+	// Conclusion/Conclusão
+		escreva("O Resultado da expressão (", x,"^",y,")= ", potencia, ".");
+		
+fimPrincipal

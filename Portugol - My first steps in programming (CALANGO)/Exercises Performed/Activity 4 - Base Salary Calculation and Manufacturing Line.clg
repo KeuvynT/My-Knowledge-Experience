@@ -1,0 +1,55 @@
+algoritmo keuvynTeixeiradeJesus;
+
+// Synthesis [EU-US]
+// Purpose: Imprimir o Salário Total do Opérario com base no (Salário Normal de R$ 240,00) junto com adicional do Operário.
+/*
+Observations:
+- The additional salary of the worker is based on the number of pieces produced:
+- If worker produce less than or equal to 500. No additional.
+- If worker produce greater than or equal to 500. Receives 0.50 per piece sold.
+- If worker produce greater than or equal to 750. Receives 0.75 per piece sold.
+*/
+// Entry: Quantity of Parts Produced, Additional Fee 1, Additional Fee 2.
+// Output: Total salary of the worker with additional.
+
+// Síntese [PT-BR]
+//  Objetivo: Imprimir o Salário Total do Opérario com base no (Salário Normal de R$ 240,00) junto com adicional do Operário.
+/* 	
+Observações: 
+- O Salário adicional do operário se baseira no número de peças produzidas:
+- Se produzir menos ou igual a 500. Sem adicional.
+- Se produzir maior ou igual a 500. Recebe 0.50 por peça vendida.
+- Se produzir maior ou igual a 750. Recebe 0.75 por peça vendida.
+*/
+//  Entrada : Quantidade de Peças Produzidas, Taxa de Adicional 1, Taxa Adicional 2.
+//  Saída   : Salário Total do Operário com adicional.
+
+principal
+
+	// Declarations/Declarações
+		inteiro npecas;
+		real salBase, taxa500, taxa750;
+	// Instructions/Instruções
+		escreval("--CALCULO DE SALÁRIO TOTAL DE OPERÁRIO--");
+			salBase = 240.00;
+		escreval("> Salário Normal: R$ ", salBase," reais.");
+		escreva("Informe a Quantidade de Peças que o operário produziu para calcular o adicional: ");
+			leia(npecas); // Numero de peças produzidas
+	// Variables/Variáveis
+		taxa500 = (0.50*npecas); // 0.50 per piece/0.50 por peça
+		taxa750 = (0.75*npecas); // 0.75 per piece/0.75 por peça
+	// Calculating the Additional/Calculando Adicional
+		se (npecas<500) entao // Caso a quantidade produzida seja menor que 500
+			escreva("> Este operário não receberá nenhum valor adicional. Permanecendo seu salário base de R$ ", salBase:3:2," reais."); 
+		senao
+		fimSe
+			se (npecas>=500 e npecas <750) entao // Caso a quantidade produzida seja maior ou igual que 500
+				escreva("> Este operário receberá o valor adicional de: R$ ", taxa500, " reais. Totalizando em R$ ", salBase+taxa500," reais.");
+		senao
+		fimSe
+			se (npecas>=750) entao // Caso a quantidade produzida seja maior que 750
+				escreva("> Este operário receberá o valor adicional de: R$ ", taxa750, " reais. Totalizando em R$ ", salBase+taxa750," reais."); 
+		senao
+		fimSe
+		
+fimPrincipal

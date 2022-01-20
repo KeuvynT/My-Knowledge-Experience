@@ -1,0 +1,49 @@
+algoritmo keuvynTeixeiradeJesus;
+
+// Synthesis [EU-US]
+// Purpose: Find all possible combinations and show the total number of combinations.
+// Entry: Limit of the Numbers Card.
+// Output: Possible combinations and total number of combinations.
+
+// Síntese [PT-BR]
+//  Objetivo: Descobrir todas as combinações possíveis e mostrar o nº total de combinações.
+//  Entrada : Limite da Cartela de Números. 
+//  Saída   : Combinações possíveis e nº total de combinações.
+
+principal
+
+	// Declarations/Declarações
+		inteiro nCartela, limitCartela; // Variáveis para Cartela e Nº Total de possibilidades da cartela.
+		inteiro escolha1, escolha2, escolha3, escolha4, escolha5, escolha6; // Variável para posições possíveis para aposta
+	// Instructions/Instruções
+	// Representation of the Card/Representação da Cartela
+		escreval("- CARTELA DE MEGASENA -");
+		escreval("  01  02  03  04  05");
+		escreval("  06  07  08  09  10");
+		escreval("  11  12  13  14  15");
+		escreval("  16  17  18  19  20");
+		escreval("");
+	// Variables/Variáveis
+		nCartela = 1; // Possibilities Counter for "n" card./Contador de Possibilidades para cartela "n".
+		limitCartela = 20; // Number of possible numbers of the card/Quantidade de nº possíveis da cartela.
+	// Possible Combinations/Combinações Possíveis;
+		para (escolha1 de 1 ate limitCartela passo 1) faca // First choice option from 1 to 20./Primeira opção de escolha de 1 a 20.
+			para (escolha2 de escolha1+1 ate limitCartela passo 1) faca // Second choice option from 2 to 20/Segunda opção de escolha de 2 a 20.
+				para (escolha3 de escolha2+1 ate limitCartela passo 1) faca // Third choice option from 3 to 20/Terceira opção de escolha de 3 a 20.
+					para (escolha4 de escolha3+1 ate limitCartela passo 1) faca // Fourth choice option from 4 to 20/Quarta opção de escolha de 4 a 20.
+				para (escolha5 de escolha4+1 ate limitCartela passo 1) faca // Fifth choice option from 5 to 20/Quinta opção de escolha de 5 a 20.
+			para (escolha6 de escolha5+1 ate limitCartela passo 1) faca // Sixth choice option from 6 to 20/Sexta opção de escolha de 6 a 20.
+		escreval("  ",nCartela, "º Combinação: ", escolha1,",", escolha2,",", escolha3,",", escolha4,",", escolha5,",", escolha6,".");
+		nCartela = nCartela + 1;
+		fimPara
+			fimPara
+					fimPara
+				fimPara
+			fimPara
+		fimPara
+		nCartela = nCartela-1;
+	//Conclusion of Possible Combinations/Conclusão de Combinações Possíveis;
+		escreval("");
+		escreval("  - O nº total de combinações possíveis é de: ", nCartela,".");
+		
+fimPrincipal

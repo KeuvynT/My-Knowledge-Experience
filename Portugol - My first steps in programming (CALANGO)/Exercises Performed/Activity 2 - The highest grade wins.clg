@@ -1,0 +1,51 @@
+algoritmo semNome;
+
+// Synthesis [EU-US]
+// Purpose: Read name and grades of 3 candidates, determine and show who won based on grades. (No grade must be equal to another).
+// Entry: Name of Students and grades.
+// Output: Winner's name and grade.
+
+// Síntese [PT-BR]
+//  Objetivo: Leia o nome e as notas de 3 candidatos, determine e mostre quem ganhou com base nas notas. (Nenhuma nota deve ser igual a outra).
+//  Entrada : Nomes e Notas dos Estudantes.
+//  Saída   : Nome do vencedor e sua nota.
+
+
+principal
+
+	// Declarations/Declarações
+		texto candidato1, candidato2, candidato3, vencedorNome;
+		inteiro nota1, nota2, nota3, vencedorNota;
+	// Instructions/Instruções
+	// Title/Título
+		escreval("---CALCULO PARA VENCEDOR DE CONCURSO---");
+	// Quiz/Questionário
+		escreval("Informe por favor o nome dos 3 candidatos com suas respectivas notas.");
+		escreva("> Digite o nome do 1º Candidato: ");
+			leia(candidato1);
+		escreva("> Nota do 1º Candidato: ");
+			leia(nota1);
+		escreva("> Digite o do 2º Candidato: ");
+			leia(candidato2);
+		escreva("> Nota do 2º Candidato: ");
+			leia(nota2);
+		escreva("> Digite o do 3º Candidato: ");
+			leia(candidato3);
+		escreva("> Nota do 3º Candidato: ");
+			leia(nota3);
+	// Checking Winner/Checando Vencedor
+		escreval("");
+				se (nota1 > nota2 e nota1 > nota3) entao
+					escreva("Resultado: O Vencedor é ", candidato1," com a maior pontuação neste concurso. A saber, ", nota1, " pontos. Parabéns!");
+			senao
+		fimSe
+				se (nota2 > nota1 e nota2 > nota3) entao
+					escreva("Resultado: O Vencedor é ", candidato2," com a maior pontuação neste concurso. A saber, ", nota2, " pontos. Parabéns!");
+			senao
+		fimSe
+				se (nota3 > nota1 e nota3 > nota2) entao
+					escreva("Resultado: O Vencedor é ", candidato3," com a maior pontuação neste concurso. A saber, ", nota3, " pontos. Parabéns!");
+			senao
+		fimSe
+		
+fimPrincipal

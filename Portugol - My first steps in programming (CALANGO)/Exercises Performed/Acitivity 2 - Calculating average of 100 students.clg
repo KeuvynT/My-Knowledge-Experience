@@ -1,0 +1,49 @@
+algoritmo keuvynTeixeiradeJesus;
+
+// Synthesis [EU-US]
+// Purpose: Read 100 names and 100 grades from 100 students. Calculate and print the average of each student with message "passed" if the average is >=5 otherwise failed. At the end, show the number of approved and disapproved students.
+// Entry: Name of Students, Grades 1-2-3.
+// Output: Grade Average, Approved or Disapproved Message, Total Approved and Disapproved.
+
+// Síntese [PT-BR]
+// Objetivo: Ler 100 nomes e 100 notas de 100 estudantes. Calcular e imprimir a média de cada aluno com mensagem "aprovado" se a media for >=5 caso contrário reprovado.	Ao final, mostrar a quantidade de estudantes aprovados e desaprovados.
+//  Entrada: Nome dos Alunos, Notas 1-2-3.
+//  Saída: Media das Notas, Mensagem de Aprovado ou Desaprovado, Total de Aprovados e Desaprovados.
+
+principal
+
+	// Declarations/Declarações
+		inteiro aluno, aprovados, desaprovados;
+		real nota1, nota2, nota3, media;
+		texto nomeAluno;
+	// Instructions/Instruções
+		escreval("--CALCULO DE APROVAÇÃO DE ESTUDANTES--");
+		escreval("> Digite o Nome de 100 Alunos e as 3 notas para cada aluno. ");
+	// Variables/Variáveis
+		aprovados = 0;
+		desaprovados = 0;
+	// Quiz/Questionário
+		para (aluno de 1 ate 100 passo 1) faca
+			escreva("> Nome do ", aluno,"º aluno: ");
+				leia(nomeAluno); // Entrade nome do Aluno
+			escreva("> 1º Nota do ", aluno,"º aluno: ");
+				leia(nota1); // Entrade nota do Aluno
+			escreva("> 2º Nota do ", aluno,"º aluno: ");
+				leia(nota2); // Entrade nota do Aluno
+			escreva("> 3º Nota do ", aluno,"º aluno: ");
+				leia(nota3); // Entrade nota do Aluno
+			media = (nota1+nota2+nota3)/3; // Calculation of Average/Calculo da média
+				se (media>=50) entao
+					escreval("O ", aluno,"º aluno, ", nomeAluno,", foi aprovado com a médida ", media:2:2,". Parabéns!");
+					aprovados = aprovados+1; // Count of Approveds/Contagem de aprovados
+			senao
+				desaprovados = desaprovados+1; // Count of disapproveds/Contagem de desaprovados
+				escreval("O ", aluno,"º aluno, ", nomeAluno,", foi reprovado com a médida ", media:2:2,".");
+			fimSe
+		fimPara
+	// Conclusion/Conclusão
+		escreval("");
+		escreval("> Quantidade total de alunos Aprovados: ", aprovados); // Total number of approved list/Lista quantidade total de aprovados
+		escreval("> Quantidade total de alunos Desaprovados: ", desaprovados); // Total number of disapproved list/Lista quantidade total de desaprovados
+		
+fimPrincipal
