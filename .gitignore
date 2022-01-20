@@ -1,0 +1,13 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# Filer/Folders
+.vscode
+bin
+lib
+
+
+# Folders/Programs
+Java - Write once, run anywhere/IDE - Eclipse/Eclipse
+*.exe
+
+# Others
