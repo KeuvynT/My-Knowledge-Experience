@@ -22,6 +22,7 @@ _4 – Expert: Represents the domain of the item._
 * MARKDOWN: Advanced;
 * JAVA: Average;
 * Programming Logic: Average;
+* C/C++: Medium;
 * CSS: Medium;
 * GIT/GITHUB: Medium;
 * MY SQL: Basic;
